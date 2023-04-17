@@ -1,7 +1,7 @@
 vim.g.mapleader = " "
 vim.opt.timeoutlen = 500 -- Set timeout length to 500 ms
 
-guicursor = ""
+vim.opt.guicursor = ""
 
 vim.opt.nu = true
 vim.opt.relativenumber = true
