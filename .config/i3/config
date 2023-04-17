@@ -152,14 +152,14 @@ bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
-set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
+set $mode_system System (l) lock, (h) hibernate, (s) sleep, (f) freeze, (r) reboot, (Shift+s) shutdown
 mode "$mode_system" {
     bindsym l exec --no-startup-id i3lock, mode "default"
-    bindsym e exec --no-startup-id i3exit logout, mode "default"
-    bindsym s exec --no-startup-id i3exit suspend, mode "default"
-    bindsym h exec --no-startup-id i3exit hibernate, mode "default"
-    bindsym r exec --no-startup-id i3exit reboot, mode "default"
-    bindsym Shift+s exec --no-startup-id i3exit shutdown, mode "default"
+    bindsym h exec --no-startup-id ./hibernate.sh, mode "default"
+    bindsym s exec --no-startup-id ./sleep.sh, mode "default"
+    bindsym f exec --no-startup-id ./freeze.sh, mode "default"
+    bindsym r exec --no-startup-id systemctl reboot, mode "default"
+    bindsym Shift+s exec --no-startup-id poweroff, mode "default"
 
     # back to normal: Enter or Escape
     bindsym Return mode "default"

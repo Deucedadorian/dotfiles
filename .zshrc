@@ -118,3 +118,5 @@ unset __conda_setup
 export PATH=$PATH:/.local/bin
 export PATH=$PATH:/anaconda3/bin
 alias config='/usr/bin/git --git-dir=/home/dylan/.cfg/ --work-tree=/home/dylan'
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
