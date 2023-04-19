@@ -117,6 +117,9 @@ unset __conda_setup
 
 export PATH=$PATH:/.local/bin
 export PATH=$PATH:/anaconda3/bin
+
+# aliases
 alias config='/usr/bin/git --git-dir=/home/dylan/.cfg/ --work-tree=/home/dylan'
+alias vim="~/Applications/nvim.appimage"
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
