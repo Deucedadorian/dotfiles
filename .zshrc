@@ -120,6 +120,7 @@ export PATH=$PATH:/anaconda3/bin
 
 # aliases ----------------------
 
+alias config='/usr/bin/git --git-dir=/home/dylan/.cfg/ --work-tree=/home/dylan'
 alias vim="/home/dylan/Applications/nvim/usr/bin/nvim"
 alias sessionizer="tms help"
 alias fzo="fzf --print0 | xargs -0 -o nvim"
