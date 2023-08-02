@@ -118,14 +118,14 @@ unset __conda_setup
 export PATH=$PATH:/.local/bin
 export PATH=$PATH:/anaconda3/bin
 
-# aliases
-alias config='/usr/bin/git --git-dir=/home/dylan/.cfg/ --work-tree=/home/dylan'
-alias vim="~/Applications/nvim.appimage" | "/home/dylan/Applications/nvim/usr/bin/nvim"
-#alias vim="/home/dylan/Applications/nvim/usr/bin/nvim"
+# aliases ----------------------
+
+alias vim="/home/dylan/Applications/nvim/usr/bin/nvim"
 alias sessionizer="tms help"
 alias fzo="fzf --print0 | xargs -0 -o nvim"
 alias fcd="fzf --print0 | xargs -0 -o cd"
 alias clic="tmux neww -n clic ipython"
+alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 export FZF_DEFAULT_OPTS="--preview 'bat --color=always {}'"
@@ -134,3 +134,5 @@ export FZF_DEFAULT_COMMAND="fd --type f"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
