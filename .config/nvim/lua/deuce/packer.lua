@@ -39,6 +39,8 @@ return require('packer').startup(function()
 
     use ('tpope/vim-fugitive')
 
+    use ('leafOfTree/vim-svelte-plugin')
+
     use {
         'VonHeikemen/lsp-zero.nvim',
         branch = 'v2.x',
